@@ -1,0 +1,12 @@
+<div class="card-container">
+  <div *ngFor="let place of places" class="place-card">
+    <img [src]="place.image" alt="Imagen de {{ place.name }}" class="place-image" />
+    <div class="card-content">
+      <h3>{{ place.name }}</h3>
+      <p>{{ place.description }}</p>
+      <p><strong>Latitud:</strong> {{ place.latitude }}</p>
+      <p><strong>Longitud:</strong> {{ place.longitude }}</p>
+       <button class="btn" (click)="onClickDelete(place)">🗑️ Borrar</button>
+    </div>
+  </div>
+</div>

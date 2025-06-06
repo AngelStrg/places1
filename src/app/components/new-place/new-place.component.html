@@ -1,0 +1,30 @@
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()" class="form-container">
+  <h2>Nuevo lugar</h2>
+
+  <label>
+    Nombre:
+    <input type="text" formControlName="name" placeholder="Nombre del lugar" />
+  </label>
+
+  <label>
+    Latitud:
+    <input type="number" formControlName="latitude" placeholder="Ej: 19.4326" />
+  </label>
+
+  <label>
+    Longitud:
+    <input type="number" formControlName="longitude" placeholder="Ej: -99.1332" />
+  </label>
+
+  <label>
+    Descripción:
+    <input type="text" formControlName="description" placeholder="Breve descripción" />
+  </label>
+
+  <label>
+    Imagen (URL):
+    <input type="text" formControlName="image" placeholder="https://..." />
+  </label>
+
+  <button type="submit">📍 Guardar lugar</button>
+</form>
